@@ -16,7 +16,7 @@ public interface ResourceWriter {
     /**
      * Permite responder el recurso solicitado.
      * @param file path del archivo
-     * @param outputStream     
+     * @param outputStream  donde se pretende responder.   
      */
     public void write(String file,OutputStream outputStream);
     /**

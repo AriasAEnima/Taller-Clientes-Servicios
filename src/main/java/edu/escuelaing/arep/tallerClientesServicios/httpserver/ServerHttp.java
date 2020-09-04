@@ -104,6 +104,13 @@ public class ServerHttp {
         return rawEntry.split(":");
     }
 
+    
+    /**
+     * Verifica si el microSpark tiene asignada alguna funcion relacionado con el path
+     * de lo contrario tratara de buscar el recurso estatico relacionado.
+     * @param req
+     * @param out 
+     */
     private void createResponse(Request req, OutputStream out) { 
         String finalresource;         
         URI theuri = req.getTheuri();

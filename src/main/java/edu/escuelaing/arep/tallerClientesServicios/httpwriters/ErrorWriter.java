@@ -26,7 +26,7 @@ public class ErrorWriter implements ResourceWriter{
    /**
     * Escribe un HTML con el mensaje del contructor al socket del cliente
     * @param file Es ignorando este parametro en esta implementacion.
-    * @param clientSocket socket del cliente.
+    * @param outputStream donde se pretende responder.
     */
     @Override
     public void write(String file, OutputStream outputStream) {

@@ -28,6 +28,11 @@ public class DBConnection {
         
     }
     
+    /**
+     * Devuelve un User de la base de datos segun el nombre
+     * @param name el nombre del usuario
+     * @return Devuelve el usuario de la base de datos
+     */
     public Document getUser(String name){
         return  (Document) users.find(new Document("name",name)).first();
     }

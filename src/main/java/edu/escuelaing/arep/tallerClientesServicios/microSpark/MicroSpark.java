@@ -20,7 +20,10 @@ import org.bson.Document;
 public class MicroSpark{
     private static Map<String,FunctionResponse> webservices;
     private static DBConnection dbc;
-
+    
+    /**
+     * Un http server podra utilizar esta clasa para postear servicios.
+     */
     public MicroSpark() {
         webservices=new HashMap<>();
         dbc=new DBConnection();
@@ -28,7 +31,9 @@ public class MicroSpark{
     }
     
     
-   
+    /**
+     * Se puede añadir servicios usando el metodo getResponse el constructor llamara esta funcion
+     */
     public static void configuration(){
         getResponse("/hello",(req)->
              "<h1> Hola ! "+ req.getValFromQuery("name") +"</h1>"
@@ -53,20 +58,40 @@ public class MicroSpark{
                        
     }
     
-    public static void getResponse(String query,FunctionResponse gf){
-        webservices.put(query, gf);
+    /**
+     * Añadira una funcion de Respuesta al HashMap
+     * @param path la ruta que se quiere colocar el servicio
+     * @param gf la funcion de respuesta
+     */
+    public static void getResponse(String path,FunctionResponse gf){
+        webservices.put(path, gf);
     }
     
   
-    
+    /**
+     * Verifica si esiste una funcion relacionada con el path
+     * @param key el path del posible servicio
+     * @return si existe o no 
+     */
     public boolean existFunction(String key){
         return webservices.containsKey(key);
     }
     
+    
+    /**
+     * Ejecuta la respuesta con el Request relacionado (si se necesita)
+     * @param key el path del servicio
+     * @param req el request completo   
+     * @return la ejecucion de la funcion de respuesta
+     */
     public String getResponse(String key,Request req){
         return webservices.get(key).response(req);
     }
       
+    /**
+     * Interfaz que nos permite declarar funciones de respuesta tipo string y 
+     * tener a mano un Request para utilizar elementos como el Query
+     */
     public interface FunctionResponse{
         public String response(Request req);            
     }
