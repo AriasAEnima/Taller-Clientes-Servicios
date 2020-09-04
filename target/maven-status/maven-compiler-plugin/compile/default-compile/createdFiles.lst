@@ -1,0 +1,13 @@
+edu\escuelaing\arep\tallerClientesServicios\httpwriters\TextFileWriter.class
+edu\escuelaing\arep\tallerClientesServicios\httpwriters\ResourceWriter.class
+edu\escuelaing\arep\tallerClientesServicios\httpserver\ServerHttp.class
+edu\escuelaing\arep\tallerClientesServicios\httpwriters\StringWriter.class
+edu\escuelaing\arep\tallerClientesServicios\microSpark\MicroSparkServer.class
+edu\escuelaing\arep\tallerClientesServicios\httpwriters\ResourceChooser$1.class
+edu\escuelaing\arep\tallerClientesServicios\httpserver\Request.class
+edu\escuelaing\arep\tallerClientesServicios\microSpark\MicroSpark$FunctionResponse.class
+edu\escuelaing\arep\tallerClientesServicios\microSpark\MicroSpark.class
+edu\escuelaing\arep\tallerClientesServicios\httpwriters\ImageWriter.class
+edu\escuelaing\arep\tallerClientesServicios\httpwriters\ResourceChooser.class
+edu\escuelaing\arep\tallerClientesServicios\microSpark\DBConnection.class
+edu\escuelaing\arep\tallerClientesServicios\httpwriters\ErrorWriter.class
