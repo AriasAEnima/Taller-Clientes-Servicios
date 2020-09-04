@@ -1,6 +1,6 @@
 # Taller Clientes y Servicios (MicroSpark)
 
-Esta aplicación web permite colocar servicios/funciones por path (o paths y query) y tambien retornar recursos estaticos
+Esta aplicación web permite colocar servicios/funciones por path (o paths y query) y también retornar recursos estáticos.
 
 ![web](media/html.PNG)
 ![web](media/database.PNG)
