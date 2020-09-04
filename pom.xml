@@ -54,7 +54,7 @@
                 <version>3.2.0</version>
                 <configuration>
                     <reportOutputDirectory>
-                        ${basedir}/src/resources/javadoc
+                        ${basedir}/src/main/resources/javadoc
                     </reportOutputDirectory>
                 </configuration>
             </plugin>
